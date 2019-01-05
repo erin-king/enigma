@@ -7,7 +7,6 @@ class EnigmaTest < Minitest::Test
 
   def setup
     @enigma = Enigma.new
-
   end
 
   def test_it_exists
