@@ -3,16 +3,25 @@ require 'pry'
 class Keys
   def initialize(key)
     @key = key_production(key)
+    @key = zero_pad(@key)
     @separated_key = @key.split(//)
+  end
+
+  def zero_pad(key)
+    key.rjust(5, '0')
   end
 
   def key_production(key)
     if key == nil
-      return "67891" #generate random 5 digit num
+      return random_number.to_s
     else
       return key
     end
-    return key
+  end
+
+  def random_number
+    random_number = rand(99999)
+    return random_number
   end
 
   def key_a

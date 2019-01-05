@@ -6,7 +6,7 @@ require './lib/keys'
 class KeysTest < Minitest::Test
 
   def setup
-      @keys = Keys.new("1234")
+      @keys = Keys.new("12345")
       @keys_random = Keys.new(nil)
   end
 
@@ -40,6 +40,11 @@ class KeysTest < Minitest::Test
     assert_equal 2, @keys_random.key_d.length
   end
 
+  def test_it_can_zero_pad
+
+    assert_equal "01234", @keys.zero_pad("1234")
+  end
+
   def test_key_production_with_key_given
 
     assert_equal "12345", @keys.key_production("12345")
@@ -47,6 +52,13 @@ class KeysTest < Minitest::Test
 
   def test_key_production_without_key_given
 
-    assert_equal "12345", @keys.key_production(nil)
+    assert(@keys.key_production(nil).to_i < 100000)
+    assert_kind_of(Integer, @keys.key_production(nil).to_i)
+  end
+
+  def test_random_number
+
+    assert(@keys.random_number < 100000)
+    assert_kind_of(Integer, @keys.random_number)
   end
 end
