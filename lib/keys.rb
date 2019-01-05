@@ -1,9 +1,18 @@
 require 'pry'
 
 class Keys
-  def initialize
-    @key = "12345"
+  def initialize(key)
+    @key = key_production(key)
     @separated_key = @key.split(//)
+  end
+
+  def key_production(key)
+    if key == nil
+      return "67891" #generate random 5 digit num
+    else
+      return key
+    end
+    return key
   end
 
   def key_a
