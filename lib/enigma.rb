@@ -6,7 +6,7 @@ class Enigma
 
   end
 
-  def encrypt(message, key, date)
+  def encrypt(message, key, date = nil)
     # returns a hash
     # {
     #   encryption: "", #encrypted message
