@@ -27,6 +27,41 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
   end
 
+  def test_it_encrypts_with_key_and_uses_todays_date
+
+    expected =
+      {
+        encryption: "keder ohulw",
+        key: "02715",
+        date: "today"
+      }
+
+    assert_equal expected, @enigma.encrypt("hello world", "02715")
+  end
+
+  def test_it_encrypts_with_key_and_uses_todays_date
+
+    expected =
+      {
+        encryption: "keder ohulw",
+        key: "02715",
+        date: "today"
+      }
+
+    assert_equal expected, @enigma.encrypt("hello world", "02715")
+  end
+
+  def test_encrypts_with_random_key_and_uses_todays_date
+    expected =
+      {
+        encryption: "keder ohulw",
+        key: "random",
+        date: "today"
+      }
+
+    assert_equal expected, @enigma.encrypt("hello world")
+  end
+
   def test_it_decrypts_with_key_and_date
 
     expected =
@@ -39,28 +74,17 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.decrypt("keder ohulw", "02715", "040895")
   end
 
-  def test_it_encrypts_with_key_and_uses_todays_date
+  def test_it_decrypts_with_key_and_uses_todays_date
 
     expected =
       {
-        encryption: "keder ohulw",
+        decryption: "hello world",
         key: "02715",
-        date: "Date::today"
+        date: "today"
       }
 
-    assert_equal expected, @enigma.encrypt("hello world", "02715")
+      assert_equal expected, @enigma.decrypt("keder ohulw", "02715")
+    # (in pry interaction pattern) assert_equal expected, @enigma.decrypt(encrypted[:encryption], "02715")
   end
 
 end
-
-# # encrypt a message with a key (uses today's date)
-# pry(main)> encrypted = enigma.encrypt("hello world", "02715")
-# #=> # encryption hash here
-#
-# #decrypt a message with a key (uses today's date)
-# pry(main) > enigma.decrypt(encrypted[:encryption], "02715")
-# #=> # decryption hash here
-#
-# # encrypt a message (generates random key and uses today's date)
-# pry(main)> enigma.encrypt("hello world")
-# #=> # encryption hash here

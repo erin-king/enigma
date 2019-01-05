@@ -6,7 +6,7 @@ class Enigma
 
   end
 
-  def encrypt(message, key, date = nil)
+  def encrypt(message, key = nil, date = nil)
     # returns a hash
     # {
     #   encryption: "", #encrypted message
@@ -15,7 +15,7 @@ class Enigma
     # }
   end
 
-  def decrypt(cyphertext, key, date)
+  def decrypt(cyphertext, key, date = nil)
     # returns a hash
     # {
     #   decryption: "", #decrypted message
