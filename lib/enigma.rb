@@ -15,4 +15,13 @@ class Enigma
     # }
   end
 
+  def decrypt(cyphertext, key, date)
+    # returns a hash
+    # {
+    #   decryption: "", #decrypted message
+    #   key: "",
+    #   date: ""
+    # }
+  end
+
 end
