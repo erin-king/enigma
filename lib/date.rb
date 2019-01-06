@@ -1,5 +1,10 @@
 require 'pry'
 
+class Date
+  def initialize(date)
+
+  end
+end
 # class Keys
 #   def initialize(key)
 #     @key = key_production(key)
