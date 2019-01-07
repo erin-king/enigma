@@ -33,6 +33,7 @@ class Offset
     return_last_four_digits[-3]
   end
 
+
 end
 
 #   def key_a
