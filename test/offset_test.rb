@@ -62,5 +62,4 @@ class OffsetTest < Minitest::Test
     assert_equal "4", date.offset_d
   end
 
-
 end

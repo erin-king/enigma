@@ -33,24 +33,12 @@ class Offset
     return_last_four_digits[-3]
   end
 
+  def offset_c
+    return_last_four_digits[-2]
+  end
+
+  def offset_d
+    return_last_four_digits[-1]
+  end
 
 end
-
-#   def key_a
-#     @separated_key[0] + @separated_key[1]
-#   end
-#
-#   def key_b
-#     @separated_key[1] + @separated_key[2]
-#   end
-#
-#   def key_c
-#     @separated_key[2] + @separated_key[3]
-#   end
-#
-#   def key_d
-#     @separated_key[3] + @separated_key[4]
-#   end
-#
-#
-# end
