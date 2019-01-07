@@ -42,4 +42,15 @@ class OffsetTest < Minitest::Test
     # 7124
     assert_equal "7", date.offset_a
   end
+
+  def test_it_can_separate_number_to_create_offset_b
+    date = Offset.new("291182")
+    date.format_date
+    date.date_squared
+    date.return_last_four_digits
+    # 7124
+    assert_equal "1", date.offset_b
+  end
+
+
 end

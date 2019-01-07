@@ -28,6 +28,8 @@ class Offset
   def offset_a
     return_last_four_digits[-4]
   end
+
+
 end
 
 #   def key_a
