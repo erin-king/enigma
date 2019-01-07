@@ -21,6 +21,13 @@ class Offset
     format_date.to_i ** 2
   end
 
+  def return_last_four_digits
+    date_squared.to_s[-4..-1]
+  end
+
+#   num_str = ‘1234567890’
+# last_four = num_str[-4…-1]
+
   # def key_production(key)
   #   if key == nil
   #     return random_number.to_s

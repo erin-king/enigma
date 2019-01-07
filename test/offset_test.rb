@@ -31,7 +31,7 @@ class OffsetTest < Minitest::Test
   def test_it_can_return_last_four_digits
     date = Offset.new("291182")
 
-    assert_equal 7124, date.four_digit_pop
+    assert_equal "7124", date.return_last_four_digits
   end
 
 end
