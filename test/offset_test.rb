@@ -21,8 +21,12 @@ class OffsetTest < Minitest::Test
     assert_equal "291182", date.format_date
   end
 
-  # def it_is_given_todays_date_if_argument_is_nil
-  #
-  #   assert_equal
-  # end
+  def test_it_can_square_a_date
+    date_today = Offset.new(nil) #only today 1.7.19
+    date = Offset.new("291182")
+    
+    assert_equal 4916674161, date_today.date_squared
+    assert_equal 84786957124, date.date_squared
+  end
+
 end
