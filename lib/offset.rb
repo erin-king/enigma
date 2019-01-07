@@ -29,6 +29,9 @@ class Offset
     return_last_four_digits[-4]
   end
 
+  def offset_b
+    return_last_four_digits[-3]
+  end
 
 end
 
