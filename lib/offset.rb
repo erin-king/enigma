@@ -1,9 +1,30 @@
 require 'pry'
+require 'date'
 
-class Date
+class Offset
+
+  attr_reader :date
+
   def initialize(date)
-
+    if date == nil
+      @date = Date.today
+    else
+      @date = Date.strptime(date, "%d%m%y")
+    end
   end
+
+  def format_date
+    @date.strftime("%d%m%y")
+  end
+
+  # def key_production(key)
+  #   if key == nil
+  #     return random_number.to_s
+  #   else
+  #     return key
+  #   end
+  # end
+
 end
 # class Keys
 #   def initialize(key)
