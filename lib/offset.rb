@@ -17,6 +17,10 @@ class Offset
     @date.strftime("%d%m%y")
   end
 
+  def date_squared
+    format_date.to_i ** 2
+  end
+
   # def key_production(key)
   #   if key == nil
   #     return random_number.to_s
