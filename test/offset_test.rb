@@ -34,7 +34,7 @@ class OffsetTest < Minitest::Test
     assert_equal "7124", date.return_last_four_digits
   end
 
-  def test_it_can_separate_number_to_create_offset
+  def test_it_can_separate_number_to_create_offset_a
     date = Offset.new("291182")
     date.format_date
     date.date_squared

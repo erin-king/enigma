@@ -24,8 +24,10 @@ class Offset
   def return_last_four_digits
     date_squared.to_s[-4..-1]
   end
-  
 
+  def offset_a
+    return_last_four_digits[-4]
+  end
 end
 
 #   def key_a
