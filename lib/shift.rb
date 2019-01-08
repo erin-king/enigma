@@ -25,9 +25,7 @@ class Shift
     @keys.key_d.to_i + @offset.offset_d
   end
 
-
-
+  def character_set
+    ("a".."z").to_a << " "
+  end
 end
-
-#return a...z "" array
-#("a".."z").to_a << " "
