@@ -9,6 +9,10 @@ class Shift
     @offset = offset
   end
 
+  def shift_a
+    @keys.key_a + @offset+offset_a
+    binding.pry
+  end
 
 
 end
