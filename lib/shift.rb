@@ -13,6 +13,9 @@ class Shift
     @keys.key_a.to_i + @offset.offset_a
   end
 
+  def shift_b
+    @keys.key_b.to_i + @offset.offset_b
+  end
 
 end
 

@@ -29,5 +29,7 @@ class ShiftTest < Minitest::Test
     shift = Shift.new(keys, offset)
 
     assert_equal 19, shift.shift_a
+    assert_equal 24, shift.shift_b
+
   end
 end
