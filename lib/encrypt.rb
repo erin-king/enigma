@@ -2,6 +2,6 @@ require 'pry'
 
 class Encrypt
   def initialize(shift)
-    @shift = shift    
+    @shift = shift
   end
 end
