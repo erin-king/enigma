@@ -33,4 +33,15 @@ class ShiftTest < Minitest::Test
     assert_equal 36, shift.shift_c
     assert_equal 49, shift.shift_d
   end
+
+  def test_it_can_create_a_character_set
+    keys = Keys.new("12345")
+    offset = Offset.new("291182")
+    shift = Shift.new(keys, offset)
+
+    expected = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
+
+    assert_equal expected, shift.character_set
+  end
+
 end

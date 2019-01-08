@@ -25,16 +25,9 @@ class Shift
     @keys.key_d.to_i + @offset.offset_d
   end
 
+
+
 end
 
-#methods shift_a, etc
 #return a...z "" array
-#offset_a = "7"
-#offset_b = "1"
-#offset_c = "2"
-#offset_d = "4"
-# "added shift_b to test_it_can_create_shifts_a_thru_d and added shift_b method"
-# key_a = 12
-# key_b = 23
-# key_c = 34
-# key_d = 45
+#("a".."z").to_a << " "
