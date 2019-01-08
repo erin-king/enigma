@@ -17,6 +17,10 @@ class Shift
     @keys.key_b.to_i + @offset.offset_b
   end
 
+  def shift_c
+    @keys.key_c.to_i + @offset.offset_c
+  end
+
 end
 
 #methods shift_a, etc
@@ -25,7 +29,7 @@ end
 #offset_b = "1"
 #offset_c = "2"
 #offset_d = "4"
-
+# "added shift_b to test_it_can_create_shifts_a_thru_d and added shift_b method"
 # key_a = 12
 # key_b = 23
 # key_c = 34

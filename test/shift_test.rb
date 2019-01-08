@@ -30,6 +30,8 @@ class ShiftTest < Minitest::Test
 
     assert_equal 19, shift.shift_a
     assert_equal 24, shift.shift_b
+    assert_equal 36, shift.shift_c
+
 
   end
 end
