@@ -26,19 +26,19 @@ class Offset
   end
 
   def offset_a
-    return_last_four_digits[-4]
+    return_last_four_digits[-4].to_i
   end
 
   def offset_b
-    return_last_four_digits[-3]
+    return_last_four_digits[-3].to_i
   end
 
   def offset_c
-    return_last_four_digits[-2]
+    return_last_four_digits[-2].to_i
   end
 
   def offset_d
-    return_last_four_digits[-1]
+    return_last_four_digits[-1].to_i
   end
 
 end

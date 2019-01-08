@@ -39,8 +39,8 @@ class OffsetTest < Minitest::Test
     date.format_date
     date.date_squared
     date.return_last_four_digits
-    # 7124
-    assert_equal "7", date.offset_a
+
+    assert_equal 7, date.offset_a
   end
 
   def test_it_can_separate_number_to_create_offset_b
@@ -48,8 +48,8 @@ class OffsetTest < Minitest::Test
     date.format_date
     date.date_squared
     date.return_last_four_digits
-    # 7124
-    assert_equal "1", date.offset_b
+
+    assert_equal 1, date.offset_b
   end
 
   def test_it_can_separate_number_to_create_offset_c_and_d
@@ -57,9 +57,9 @@ class OffsetTest < Minitest::Test
     date.format_date
     date.date_squared
     date.return_last_four_digits
-    # 7124
-    assert_equal "2", date.offset_c
-    assert_equal "4", date.offset_d
+
+    assert_equal 2, date.offset_c
+    assert_equal 4, date.offset_d
   end
 
 end
