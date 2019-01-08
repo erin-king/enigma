@@ -22,4 +22,12 @@ class ShiftTest < Minitest::Test
     assert_equal keys, shift.keys
     assert_equal offset, shift.offset
   end
+
+  def test_it_can_create_shifts_a_thru_d
+    keys = Keys.new("12345")
+    offset = Offset.new("291182")
+    shift = Shift.new(keys, offset)
+
+    assert_equal 19, shift.shift_a
+  end
 end
