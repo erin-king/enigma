@@ -17,7 +17,7 @@ class OffsetTest < Minitest::Test
     date_today = Offset.new(nil)
     date = Offset.new("291182")
 
-    assert_equal "070119", date_today.format_date
+    # assert_equal "070119", date_today.format_date #only today 1.7.19
     assert_equal "291182", date.format_date
   end
 

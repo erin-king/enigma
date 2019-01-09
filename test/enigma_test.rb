@@ -57,7 +57,6 @@ class EnigmaTest < Minitest::Test
         key: "random",
         date: "today"
       }
-binding.pry
     assert_equal expected, @enigma.encrypt("hello world")
   end
 
