@@ -40,5 +40,4 @@ class Keys
     @separated_key[3] + @separated_key[4]
   end
 
-
 end
