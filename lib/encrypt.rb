@@ -10,10 +10,6 @@ class Encrypt
     message_array.each do |letter_of_message|
       find_index(letter_of_message)
     end
-    # hold = @shift.character_set.find do |letter|
-    #   letter == "q"
-    # end  #rotate(@shift.shift_a)
-    # return @shift.shift_a
   end
 
   def find_index(letter_of_message)
